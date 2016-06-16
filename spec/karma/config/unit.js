@@ -5,7 +5,7 @@
 module.exports = function (config) {
   'use strict';
 
-  var reporters = ['mocha', 'coverage', 'notify', 'jscs', 'growl'];
+  var reporters = ['mocha', 'coverage', 'notify', 'growl'];
   if (config.singleRun) {
     reporters = ['dots'];
   }
@@ -70,18 +70,8 @@ module.exports = function (config) {
 
     // Preprocessors
     preprocessors: {
-      'app/assets/javascripts/admin/angular/**/*.js': ['jshint', 'jscs', 'coverage'],
+      'app/assets/javascripts/admin/angular/**/*.js': ['jshint', 'coverage'],
       'app/views/partials/**/*.html.erb': ['ng-html2js'],
-    },
-
-    /* Plugin configs */
-    jshintPreprocessor: {
-      stopOnError: true,
-      jshintrc: './.jshintrc',
-    },
-
-    jscsPreprocessor: {
-      configPath: './.jscsrc',
     },
 
     coverageReporter: {
