@@ -1,0 +1,22 @@
+{
+  "name": "clutter-ng-interview",
+  "version": "1.0.0",
+  "description": "Angular interview project",
+  "dependencies": {
+    "karma": ">= 0.13.9",
+    "karma-chai": "~0.1",
+    "karma-coverage": "^0.5.3",
+    "karma-growl-reporter": "^0.1.1",
+    "karma-jscs-preprocessor": "^0.1.0",
+    "karma-jshint-preprocessor": "0.0.6",
+    "karma-mocha": "~0.1",
+    "karma-mocha-reporter": "^1.1.6",
+    "karma-ng-html2js-preprocessor": "^0.2.0",
+    "karma-ng-scenario": "0.1.0",
+    "karma-notify-reporter": "^0.1.1",
+    "karma-phantomjs-launcher": "0.1.0",
+    "karma-sinon-chai": "~0.1",
+    "mocha": ">=2.3.3",
+    "phantomjs": ">= 1.9.7-1"
+  }
+}
