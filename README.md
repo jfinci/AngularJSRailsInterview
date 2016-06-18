@@ -1,16 +1,9 @@
 # Angular Interview Project
 
-## Setup
-1. Verify rails is installed - `ruby -v`
-2. Verify sqlite is installed - `$ sqlite3 --version`
-3. Clone Repository - `git clone github.com/clutter/clutter-ng-interview.git`
-4. cd into repo - `cd clutter-ng-interview`
-5. (in repo) install rails dependencies - `bundle install`
-6. (in repo) install JS dependencies - `npm install`
-7. (in repo) set up db - `rake db:migrate`
-8. (in repo) fill local db - `rake db:seed`
+1. Create a Cloud 9 Account - c9.io
+2. Request access to c9 Project - https://ide.c9.io/ghostybits/clutter-nginterview
 
-That should get you up and running, to run your local server run `rails s` in your terminal, with default settings that will let you access your app at `localhost:3000`
+That should get you up and running, to run your local server run `rails s -b $IP -p $PORT` in the terminal, with default settings that will let you access your app with the preview screen.
 
 To run your karma tests once you can run `rake karma:run`
 
