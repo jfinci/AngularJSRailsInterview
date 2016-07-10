@@ -14,7 +14,7 @@ namespace :karma  do
       f.write unit_js(application_spec_files)
       f.flush
 
-      system("./node_modules/karma/bin/karma #{command} #{f.path} #{args}") or fail
+      system("./node_modules/karma/bin/karma #{command} #{f.path.shellescape} #{args}") or fail
     end
   end
 

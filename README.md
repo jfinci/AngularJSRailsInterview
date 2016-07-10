@@ -44,7 +44,7 @@ A user interface such as an input field to type in the search query should be in
 #### Task Notes
 * This app has been scaffolded out, please write your solution code in the `persons_controller.js`, `persons_resource.js`, `persons_controller_spec.js` and `home/index.html.erb` files
 
-* In the seed data provided there is a one table `Person` with the columns `name` and `id`, you can get a JSON array of all the rows in the Persons table by hitting the endpoint `/persons.json`
+* In the seed data provided there is a one table `Person` with the columns `name` and `id`, you can get a JSON array of all the rows in the Persons table by hitting the endpoint `/person.json`
 
 * Our app uses NgResource to handle async requests from the api endpoints. Please use this method to request the data from the `Person` table. - `https://docs.angularjs.org/api/ngResource/service/$resource`
 
