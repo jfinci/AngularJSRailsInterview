@@ -2,6 +2,7 @@
 
 NOTE: FOLLOW SETUP OPTION 1 ONLY IF YOU ARE NOT USING A MAC. OTHERWISE, IF YOU ARE USING A MAC SKIP DOWN TO SETUP OPTION 2
 
+----
 Setup Option 1:
 
 If you don't have a mac:
@@ -13,7 +14,7 @@ That should get you up and running, to run your local server run `rails s -b $IP
 
 ----
 
-SETUP OPTION 2:
+Setup Option 2:
 
 Mac: (setting up rails)
 
