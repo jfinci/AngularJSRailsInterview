@@ -37,11 +37,12 @@ To run your karma tests once you can run `rake karma:run`
 If you want the tests to rerun when you save the file you can run `rake karma:start` in a separate terminal.
 
 ## Task
-Implement a search service in JavaScript that searches through an collection of movie resources. _(retrieved from the movie endpoint)_ and returns a list of matching results.
 
-There is also a CastMember resource which belongs to movie, and move has many cast members.
+1. Implement a search service in JavaScript that searches through an collection of movie resources. _(retrieved from the movie endpoint)_ and returns a list of matching results.
+2. Searching for ‘Batman’ should any movie with the words Batman on the right pane
+3. Once a movie title is select on the right it should display the detail page on the left pane.
 
-For example, searching for ‘Batman’ should any movie with the words Batman on the right pane.  Once a movie title is select on the right it should display the detail page on the left pane.
+There is a movie resource, and castmember resource which belongs to movie, and movie has many cast members.
 
 A user interface such as an input field to type in the search query should be included as well. **See the included mockup** for a sample of what the final result should look like.
 
