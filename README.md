@@ -1,6 +1,6 @@
 # Angular Interview Project
 
-NOTE: FOLLOW SETUP OPTION 1 ONLY IF YOU ARE NOT USING A MAC. OTHERWISE, IF YOU ARE USING A MAC SKIP DOWN TO SETUP OPTION 2
+NOTE: Option 1 is if you are NOT  using a Mac. If you are on a Mac skip to step 2.
 
 ----
 Setup Option 1:
