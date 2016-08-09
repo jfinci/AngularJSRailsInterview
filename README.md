@@ -58,4 +58,4 @@ A user interface such as an input field to type in the search query should be in
 * Our app uses NgResource to handle async requests from the api endpoints. Please use this method to request the data from the `Person` table. - `https://docs.angularjs.org/api/ngResource/service/$resource`
 
 ## Mock up
-![Mock Up](doc/mock.png)
+![Mock Up](doc/lab_ui.jpg)
