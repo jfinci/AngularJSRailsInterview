@@ -1,0 +1,1 @@
+json.(movie, :id, :title, :poster_path, :overview, :tmdb_id, :release_date)

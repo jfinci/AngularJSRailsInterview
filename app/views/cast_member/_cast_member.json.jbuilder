@@ -1,0 +1,1 @@
+json.(cast_member, :character, :movie_id, :tmdb_id, :name, :profile_path)
