@@ -27,7 +27,7 @@ Mac: (setting up rails)
 7. `bundle install`
 8. `npm install`
 9. `rake db:migrate`
-10. `rake db:seed`
+10. `rake movie:pull`
 
 That should get you up and running, to run your local server run `rails s` in your terminal, with default settings that will let you access your app at `localhost:3000`
 
@@ -48,11 +48,12 @@ A user interface such as an input field to type in the search query should be in
 Assume the API might be slow.
 
 #### Task Notes
-* This app has been scaffolded out, please write your solution code in the `persons_controller.js`, `persons_resource.js`, `persons_controller_spec.js` and `home/index.html.erb` files
 
-* In the seed data provided there is a one table `Person` with the columns `name` and `id`, you can get a JSON array of all the rows in the Persons table by hitting the endpoint `/person.json`
+* Before you start the task you will have to pull down the movie data into your db, a rake task has been provided to do that `rake movie:pull`
 
-* Our app uses NgResource to handle async requests from the api endpoints. Please use this method to request the data from the `Person` table. - `https://docs.angularjs.org/api/ngResource/service/$resource`
+* In the data provided there are two tables `Movie` and `CastMember`, you can access the index for these resources from their respective enpoints `/movie.json` and `/cast_member.json`
+
+* Our app uses NgResource to handle async requests from the api endpoints. Please use this method to request the data from the `Movie` and `CastMember` tables. - `https://docs.angularjs.org/api/ngResource/service/$resource`
 
 ## Mock up
 ![Mock Up](doc/lab_ui.png)
