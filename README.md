@@ -37,18 +37,15 @@ To run your karma tests once you can run `rake karma:run`
 If you want the tests to rerun when you save the file you can run `rake karma:start` in a separate terminal.
 
 ## Task
-Implement a search service in JavaScript that searches through an array of names _(retrieved from the persons endpoint)_ and returns a list of matching results.
+Implement a search service in JavaScript that searches through an collection of movie resources. _(retrieved from the movie endpoint)_ and returns a list of matching results.
 
-For example, searching for ‘John’ should return all array elements with the first name of John or the last name of John, if any. Searching for ‘John Smith’ should return all John Smiths found in the array.
+There is also a CastMember resource which belongs to movie, and move has many cast members.
+
+For example, searching for ‘Batman’ should any movie with the words Batman on the right pane.  Once a movie title is select on the right it should display the detail page on the left pane.
 
 A user interface such as an input field to type in the search query should be included as well. **See the included mockup** for a sample of what the final result should look like.
 
-**The search should:**
-  * be an unanchored substring search
-  * be case insensitive
-  * return no results with no query
-  * **EXTRA CREDIT:** Bold the substring match
-
+Assume the API might be slow.
 
 #### Task Notes
 * This app has been scaffolded out, please write your solution code in the `persons_controller.js`, `persons_resource.js`, `persons_controller_spec.js` and `home/index.html.erb` files
