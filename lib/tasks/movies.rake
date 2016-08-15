@@ -1,5 +1,5 @@
 namespace :movies do
-  task :pull do
+  task pull: :environment do
     headers = {
       :accept => 'application/json'
     }
