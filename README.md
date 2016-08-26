@@ -27,7 +27,7 @@ Mac: (setting up rails)
 7. `bundle install`
 8. `npm install`
 9. `rake db:migrate`
-10. `rake movie:pull`
+10. `rake movies:pull`
 
 That should get you up and running, to run your local server run `rails s` in your terminal, with default settings that will let you access your app at `localhost:3000`
 

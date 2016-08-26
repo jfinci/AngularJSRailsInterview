@@ -9,6 +9,6 @@ class AddCastMembersTable < ActiveRecord::Migration
     	t.timestamps null: false
     end
 
-    add_foreign_key :cast_memebers, :movies
+    add_foreign_key :cast_members, :movies
   end
-end	
+end
