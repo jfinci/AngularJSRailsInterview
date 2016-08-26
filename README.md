@@ -53,7 +53,10 @@ Assume the API might be slow.
 
 * Before you start the task you will have to pull down the movie data into your db, a rake task has been provided to do that `rake movie:pull`
 
-* In the data provided there are two tables `Movie` and `CastMember`, you can access the index for these resources from their respective enpoints `/movie.json` and `/cast_member.json`
+* In the data provided there are two tables `Movie` and `CastMember`, you can access the index for these resources from their respective enpoints `/movies.json` and `/movies/<id>/cast_members.json`
+
+* The /movies.json endpoint can accept search terms in the following way:
+`/movies.json?q[title_cont]=your-search-term`. the specs/controllers directory has a working example of a search operation.
 
 * Our app uses NgResource to handle async requests from the api endpoints. Please use this method to request the data from the `Movie` and `CastMember` tables. - `https://docs.angularjs.org/api/ngResource/service/$resource`
 

@@ -1,1 +1,0 @@
-json.(person, :id, :name)
