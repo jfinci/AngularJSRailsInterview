@@ -1,40 +1,7 @@
 # Angular Interview Project
 
-NOTE: Option 1 is if you are NOT  using a Mac. If you are on a Mac skip to step 2.
-
-----
-Setup Option 1:
-
-If you don't have a mac:
-
-1. Create a Cloud 9 Account - c9.io
-2. Request access to c9 Project - https://ide.c9.io/ghostybits/clutter-nginterview
-
-That should get you up and running, to run your local server run `rails s -b $IP -p $PORT` in the terminal, with default settings that will let you access your app with the preview screen.
-
-----
-
-Setup Option 2:
-
-Mac: (setting up rails)
-
-1. install brew if they don't have it (http://brew.sh/)
-2. `brew install rbenv`
-3. `rbenv install`
-4. `gem install bundler`
-5. `git clone git@github.com:clutter/clutter-ng-interview.git`
-6. `cd clutter-ng-interview`
-7. `bundle install`
-8. `npm install`
-9. `rake db:migrate`
-10. `rake movies:pull`
-
-That should get you up and running, to run your local server run `rails s` in your terminal, with default settings that will let you access your app at `localhost:3000`
-
-
-To run your karma tests once you can run `rake karma:run`
-
-If you want the tests to rerun when you save the file you can run `rake karma:start` in a separate terminal.
+1) You will be invited to a cloud9 account, create a new workspace -> clone workspace -> front-end-lab
+2) Everything should be already set up and good to go, and you have full access 
 
 ## Task
 
