@@ -28,4 +28,6 @@ Assume the API might be slow.
 * Our app uses NgResource to handle async requests from the api endpoints. Please use this method to request the data from the `Movie` and `CastMember` tables. - `https://docs.angularjs.org/api/ngResource/service/$resource`
 
 ## Mock up
+_note: treat this as a wireframe - feel free to theme it in a modern, professional fashion._
+
 ![Mock Up](doc/lab_ui.png)
