@@ -1,0 +1,28 @@
+<div id="search" ng-controller="SearchController as vm">
+    <div class="card card-material">
+        <div class="card-block">
+            <div class="search-input-wrapper">
+                <div class="search-icon">
+                    <i class="fa fa-search"></i>
+                </div>
+                <div class="search-input">
+                    <input type="text" placeholder="Start searching popular movies..." ng-model="vm.searchText" ng-model-options="{debounce: 500}" ng-change="vm.onSearchChange()"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="search-results scrollbar-dynamic">
+        <div class="card card-material card-selectable movie-result" ng-repeat="movie in vm.movieResults">
+            <div class="movie-result-inner">
+                <div class="movie-result-image">
+                    <img src="{{vm.getMoviePosterUrl(movie.poster_path)}}">
+                </div>
+                <div class="movie-result-data">
+                    <h4>{{movie.title}}</h2>
+                    <small class="text-muted">{{movie.release_date | date}}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

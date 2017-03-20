@@ -1,0 +1,178 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+@import "bootstrap";
+@import "palette";
+@import "jquery.mCustomScrollbar";
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Poppins');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+// $primary-color-dark:   #455A64;
+// $primary-color:        #607D8B;
+// $primary-color-light:  #CFD8DC;
+// $primary-color-text:   #FFFFFF;
+// $accent-color:         #FF5722;
+// $primary-text-color:   #212121;
+// $secondary-text-color: #757575;
+// $divider-color:        #BDBDBD;
+
+body {
+    color: #FFFFFF;
+    background-color: $primary-color-dark;
+
+    .main-content {
+      margin: 25px 0 0 0;
+    }
+
+    .header {
+      line-height: 130px;
+    }
+
+    .nav-group {
+      // line-height: 130px;
+      vertical-align: middle;
+
+      .nav-link {
+        color: #BDBDBD;
+        padding: 0.5em 2.5em;
+
+        &:hover {
+          color: #FF5722;
+        }
+      }
+    }
+
+    .logo {
+      color: $accent-color;
+      .logo-text {
+        font-family: 'PT Sans Narrow', sans-serif;
+        font-size: 75px;
+      }
+    }
+}
+
+search {
+  .movie-result.ng-enter {
+    animation: 0.5s resultfadein;
+  }
+
+  .movie-result.ng-leave {
+    animation: 0.5s resultfadeout;
+  }
+
+  .movie-result.ng-move {
+    transition: all 0.5s linear;
+    opacity: 0;
+  }
+
+  @keyframes resultfadein {
+    from { opacity:0; }
+    to { opacity:1; }
+  }
+
+  @keyframes resultfadeout {
+    from { opacity:1; }
+    to { opacity:0; }
+  }
+
+  .movie-result {
+    margin-bottom: 15px;
+
+    .movie-result-inner {
+      display: flex;
+    }
+
+    .movie-result-data,
+    .movie-result-image {
+      display: block;
+    }
+
+    .movie-result-data {
+      padding: 20px;
+
+      small {
+        color: #CFD8DC !important;
+      }
+    }
+
+    h4 {
+      font-size: 1.8em;
+      font-family: 'PT Sans Narrow', sans-serif;
+    }
+
+    img {
+      border-radius: 2px;
+    }
+  }
+
+  .search-results {
+    overflow-y: auto;
+    overflow-x: visible;
+
+    max-height: 400px;
+  }
+
+  .search-input-wrapper {
+    display: table;
+    width: 100%;
+
+    .search-icon {
+      display: table-cell;
+      color: $primary-color-light;
+      font-size: 1.3em;
+    }
+
+    .search-input {
+      display: table-cell;
+      font-size: 1.3em;
+      
+      input {
+        background-color: inherit;
+        border: 0 solid;
+        font-family: 'PT Sans Narrow', sans-serif;
+        width: 100%;
+        color: $primary-color-text;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  background: #607D8B;
+  border-radius: 2px;
+
+  .card-light {
+      background-color: #CFD8DC;
+  }
+}
+
+.card-material {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-selectable {
+  cursor: pointer;
+}
+
+.card-material:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}

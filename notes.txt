@@ -1,0 +1,10 @@
+base_movie_url = 'http://api.themoviedb.org/3/movie/popular?api_key=03c0c493651961ae410bb4a44efaf098&page='
+    base_cast_url = 'http://api.themoviedb.org/3/movie/'
+    api_key_param = '?api_key=03c0c493651961ae410bb4a44efaf098'
+
+https://api.themoviedb.org/3/configuration?api_key=03c0c493651961ae410bb4a44efaf098
+
+http://image.tmdb.org/t/p/<size>/<url>
+
+where <size> = "w92","w154","w185","w342","w500","w780","original"
+
