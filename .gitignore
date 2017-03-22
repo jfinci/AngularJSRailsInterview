@@ -22,4 +22,5 @@
 /coverage
 
 #Ignore notes
-notes.txt
+/notes.txt
+/digitaloceannotes.txt
