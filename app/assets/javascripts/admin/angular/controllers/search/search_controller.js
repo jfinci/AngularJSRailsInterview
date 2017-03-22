@@ -5,24 +5,20 @@
         .module('app')
         .controller('SearchController', SearchController)
 
-    SearchController.$$inject = ['MovieService'];
+    SearchController.$$inject = ['MovieService', 'MovieBrowserService'];
 
-    function SearchController(MovieService) {
+    function SearchController(MovieService, MovieBrowserService) {
         var vm = this;
         vm.getMoviePosterUrl = getMoviePosterUrl;
         vm.onSearchChange = onSearchChange;
-        vm.searchText = '';
+        vm.onMovieSelect = onMovieSelect;
+
         vm.movieResults = [];
+        vm.searchText = '';
+        vm.selectedMovie = null;
 
-        activate();
-
-        $(".search-results").mCustomScrollbar();
-
-        function activate() { }
-
-        // Exports
-        function getMoviePosterUrl(path) {
-            return 'http://image.tmdb.org/t/p/w92/' + path;
+        function getMoviePosterUrl(size, path) {
+            return MovieService.getPosterUrl(size, path);
         }
 
         function onSearchChange () {
@@ -30,9 +26,15 @@
                 vm.movieResults = [];
                 MovieService.findInTitle(vm.searchText)
                 .$promise.then(function(movies) {
-                    console.log(movies);
                     vm.movieResults = movies;
                 });
+            }
+        }
+
+        function onMovieSelect(movie) {
+            if (movie !== vm.selectedMovie) {
+                vm.selectedMovie = movie;
+                MovieBrowserService.onNext(movie);
             }
         }
     }

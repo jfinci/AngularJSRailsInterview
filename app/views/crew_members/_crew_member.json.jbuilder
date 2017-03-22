@@ -1,0 +1,1 @@
+json.(crew_member, :job, :department, :movie_id, :tmdb_id, :name, :profile_path)

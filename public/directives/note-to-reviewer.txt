@@ -1,0 +1,4 @@
+I put these here as I am fairly new to rails and a quick google revealed more 
+in depth solutions than I wanted- but just wanted to reiterate that they are here
+for demo purposes and something more structured probably geographically closer to
+their corresponding directives would be better.

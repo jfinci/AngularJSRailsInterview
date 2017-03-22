@@ -1,0 +1,33 @@
+<div class="card overview-card" ng-if="vm.movieSelected">
+    <div class="card-block">
+        <div class="row">
+            <div class="col-5">
+                <img class="movie-overview-image material" ng-src="{{vm.getMoviePosterUrl('w342')}}" />
+            </div>
+            <div class="col-7">
+                <div><h4>{{vm.movie.title}} <small class="text-muted">({{vm.movie.release_date | date:'yyyy'}})</small></h4></div>
+                <hr/>
+                <div><h5 class="overview-section-label">Overview</h5></div>
+                <div>{{vm.movie.overview}}</div>
+                <hr>
+                <div><h5 class="overview-section-label">Featured Crew</h5></div>
+                <div class="row">
+                    <div class="col-4" ng-repeat="crew in vm.featuredCrew">
+                        <div>{{ crew.name }}</div>
+                        <div><h6 class="featured-crew">{{ crew.job }}</h6></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row" >
+            <div class="col-12">
+                <div class="row text-center">
+                    <div class="col-4 text-center" ng-repeat="cast in vm.topCast">
+                        <cast-bubble cast-member="cast"></cast-bubble> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

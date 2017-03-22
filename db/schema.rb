@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160809002955) do
+ActiveRecord::Schema.define(version: 20170320175947) do
 
   create_table "cast_members", force: :cascade do |t|
     t.string   "character"
+    t.integer  "movie_id",     null: false
+    t.integer  "tmdb_id",      null: false
+    t.string   "name",         null: false
+    t.string   "profile_path"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "crew_members", force: :cascade do |t|
+    t.string   "job"
+    t.string   "department"
     t.integer  "movie_id",     null: false
     t.integer  "tmdb_id",      null: false
     t.string   "name",         null: false

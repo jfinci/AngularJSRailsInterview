@@ -24,8 +24,8 @@ namespace :movies do
         puts "----------------------------------#{from_api['title']}----------------------------------"
         puts "PULLING CAST: #{from_api['title']}..."
 
-        cast_response = JSON.parse(RestClient.get base_cast_url + from_api['id'].to_s + '/credits' + api_key_param, headers)
-        cast_response = cast_response['cast']
+        credits_response = JSON.parse(RestClient.get base_cast_url + from_api['id'].to_s + '/credits' + api_key_param, headers)
+        cast_response = credits_response['cast']
         cast_response.each do |cast|
           puts "SAVED: #{cast['name']} as #{cast['character']}"
           cast_member = CastMember.find_or_initialize_by name: cast['name'], movie_id: movie['id']
@@ -36,6 +36,20 @@ namespace :movies do
           cast_member.profile_path = cast['profile_path']
           cast_member.save!
         end
+        
+        cast_response = credits_response['crew']
+        cast_response.each do |crew|
+          puts "SAVED: #{crew['name']} with job #{crew['job']}}"
+          crew_member = CrewMember.find_or_initialize_by name: crew['name'], movie_id: movie['id']
+          crew_member.job = crew['job']
+          crew_member.department = crew['department']
+          crew_member.movie_id = movie['id']
+          crew_member.tmdb_id = crew['id']
+          crew_member.name = crew['name']
+          crew_member.profile_path = crew['profile_path']
+          crew_member.save!
+        end
+
         puts '--------------------------------------------------------------------'
       end
     end

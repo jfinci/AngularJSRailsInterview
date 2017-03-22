@@ -14,8 +14,8 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'ransack'
 gem 'will_paginate', '~> 3.0'
 gem "font-awesome-rails"
-gem 'scrollbar-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+gem 'rxjs-rails'
 
 source 'http://insecure.rails-assets.org' do
   gem 'rails-assets-angular'

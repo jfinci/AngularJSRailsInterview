@@ -1,0 +1,8 @@
+You can use the following SFTP credentials to upload your files (using FileZilla/WinSCP/Rsync):
+  * Host: 45.55.214.196
+  * User: rails
+  * Pass: rdOt2LWCAX
+
+You can use the following Postgres database credentials:
+  * User: rails
+  * Pass: Rhem2dYvs1

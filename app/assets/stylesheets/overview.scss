@@ -1,0 +1,78 @@
+@import 'palette.scss';
+
+.movie-overview,
+.search-col {
+    transition: width ease .3s, margin 0.3s ease;
+}
+
+.movie-overview {
+    img.movie-overview-image {
+        max-width:100%;
+        max-height:100%;
+    }
+    h6.featured-crew,
+    h5.overview-section-label {
+        color: $primary-color-light !important;
+    }
+
+    h4 {
+        font-size: 2rem;
+
+        small.text-muted {
+            color: $primary-color-light !important;
+        }
+    }
+
+    .profile-picture {
+        border-radius: 50%;
+        width: 91px;
+        height: 91px;
+        overflow: hidden;
+        margin: 0 auto;
+        border: 3px solid $accent-color;
+
+        img {
+            position: relative;
+            top: -20px;
+        }
+    }
+
+    @-webkit-keyframes fadeOut {
+        0% {opacity: 1;}
+        100% {opacity: 0;}
+    }
+         
+    @keyframes fadeOut {
+        0% {opacity: 1;}
+        100% {opacity: 0;}
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+         
+    @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+
+    .fadeOut {
+        -webkit-animation-name: fadeOut;
+        animation-name: fadeOut;
+        animation-duration: .2s;
+    }
+
+    .card.overview-card.ng-enter,
+    .fadeIn {
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        animation-duration: .3s;
+    }
+
+    .card.overview-card.ng-leave {
+        -webkit-animation-name: fadeOut;
+        animation-name: fadeOut;
+        animation-duration: .3s;
+    }
+}

@@ -1,4 +1,4 @@
-<div id="search" ng-controller="SearchController as vm">
+<div id="search">
     <div class="card card-material">
         <div class="card-block">
             <div class="search-input-wrapper">
@@ -12,15 +12,20 @@
         </div>
     </div>
     <br/>
-    <div class="search-results scrollbar-dynamic">
-        <div class="card card-material card-selectable movie-result" ng-repeat="movie in vm.movieResults">
-            <div class="movie-result-inner">
-                <div class="movie-result-image">
-                    <img src="{{vm.getMoviePosterUrl(movie.poster_path)}}">
-                </div>
-                <div class="movie-result-data">
-                    <h4>{{movie.title}}</h2>
-                    <small class="text-muted">{{movie.release_date | date}}</small>
+    <div class="search-results" ng-class="{sidebar : vm.selectedMovie !== null}">
+        <div class="scrollbar-inner">
+            <div class="card card-material card-selectable movie-result"
+                    ng-class="{'card-selected' : vm.selectedMovie.id === movie.id}" 
+                    ng-repeat="movie in vm.movieResults"
+                    ng-click="vm.onMovieSelect(movie)">
+                <div class="movie-result-inner">
+                    <div class="movie-result-image">
+                        <img ng-src="{{vm.getMoviePosterUrl('w92', movie.poster_path)}}">
+                    </div>
+                    <div class="movie-result-data">
+                        <h4>{{movie.title}}</h4>
+                        <small class="text-muted">{{movie.release_date | date}}</small>
+                    </div>
                 </div>
             </div>
         </div>

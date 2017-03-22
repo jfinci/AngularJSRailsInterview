@@ -4,4 +4,4 @@
 //= require angular-resource
 //= require angular-animate
 //= require_tree ./admin
-//= require jquery.mCustomScrollbar
+//= require rx.lite

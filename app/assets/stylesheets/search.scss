@@ -1,0 +1,84 @@
+@import 'palette.scss';
+
+search {
+  .movie-result.ng-enter {
+    animation: 0.5s resultfadein;
+  }
+
+  .movie-result.ng-leave {
+    animation: 0.5s resultfadeout;
+  }
+
+  .movie-result.ng-move {
+    transition: all 0.5s linear;
+    opacity: 0;
+  }
+
+  @keyframes resultfadein {
+    from { opacity:0; }
+    to { opacity:1; }
+  }
+
+  @keyframes resultfadeout {
+    from { opacity:1; }
+    to { opacity:0; }
+  }
+
+  .movie-result {
+    margin-bottom: 15px;
+
+    .movie-result-inner {
+      display: flex;
+    }
+
+    .movie-result-data,
+    .movie-result-image {
+      display: block;
+    }
+
+    .movie-result-data {
+      padding: 15px;
+
+      small {
+        color: #CFD8DC !important;
+      }
+    }
+
+    h4 {
+      font-size: 1.4em;
+      font-family: 'PT Sans Narrow', sans-serif;
+    }
+
+    img {
+      border-radius: 2px;
+    }
+  }
+
+  .search-input-wrapper {
+    display: table;
+    width: 100%;
+
+    .search-icon {
+      display: table-cell;
+      color: $primary-color-light;
+      font-size: 1.3em;
+    }
+
+    .search-input {
+      display: table-cell;
+      font-size: 1.3em;
+      
+      input {
+        background-color: inherit;
+        border: 0 solid;
+        font-family: 'PT Sans Narrow', sans-serif;
+        width: 100%;
+        color: $primary-color-text;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

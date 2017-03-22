@@ -13,13 +13,13 @@
         // Creates:
         //
         var directive = {
-            link: link,
             restrict: 'EA',
-            templateUrl: 'directives/search.template.html'
+            templateUrl: 'directives/search.template.html',
+            controller: 'SearchController',
+            controllerAs: 'vm',
+            scope: {}
         };
         return directive;
-
-        function link(scope, element, attrs) { }
     }
 
 })();

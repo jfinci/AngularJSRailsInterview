@@ -12,11 +12,14 @@
             searchTerm:'@searchTerm'
         });
 
-        /// Methods
         resource.findInTitle = function (input) {
             return this.query({ 
                 searchTerm: input
             });
+        }
+
+        resource.getPosterUrl = function (size, path) {
+            return 'http://image.tmdb.org/t/p/' + size + '/' + path;
         }
 
         return resource;
