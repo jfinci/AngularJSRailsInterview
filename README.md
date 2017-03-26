@@ -13,6 +13,6 @@ Stack and data was supplied as well as the mockup.  *All angular controllers dir
 Screenshots of the completed app
 
 
-![Completed 1](doc/1.png)
-![Completed 2](doc/2.png)
-![Completed 3](doc/3.png)
+![Completed 1](doc/1.PNG)
+![Completed 2](doc/2.PNG)
+![Completed 3](doc/3.PNG)
