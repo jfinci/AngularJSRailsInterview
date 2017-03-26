@@ -20,7 +20,7 @@
         vm.featuredCrew = [];
 
         activate();
-
+        
         function activate() {
             MovieBrowserService.getSubject().subscribe( function(movie) {
                 vm.onMovieSelected(movie)

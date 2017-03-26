@@ -21,7 +21,7 @@
             return MovieService.getPosterUrl(size, path);
         }
 
-        function onSearchChange () {
+        function onSearchChange() {
             if (vm.searchText.length > 2) {
                 vm.movieResults = [];
                 MovieService.findInTitle(vm.searchText)
