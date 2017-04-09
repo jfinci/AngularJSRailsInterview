@@ -14,7 +14,6 @@ My work can be found in the app/assets/javascripts/admin/angular directory.
 
 Screenshots of the completed app
 
-
-![Completed 1](doc/1.PNG)
 ![Completed 2](doc/2.PNG)
+![Completed 1](doc/1.PNG)
 ![Completed 3](doc/3.PNG)
