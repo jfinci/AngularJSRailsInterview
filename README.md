@@ -1,5 +1,7 @@
 # Angular Interview Project
 
+Note: Currently working on putting this up on my personal portfolio.
+
 ## Task
 
 Create a page where a user can search for popular movies.
